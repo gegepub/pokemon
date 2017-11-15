@@ -24,13 +24,18 @@ if (formIsSubmit('insertPokemon')) {
   $pokedex = $_POST['pokedex'];
 
   // Fichier image
-  If (isset($_FILES['image'])) {  // si une image a été fournie par l'utilisateur
-      var_dump($_FILES);
-  }
-  // rename($_FILES['image']['tmp_name'], $_FILES['image']['tmp_name'].'.save');
-  // nom temporaire de l'image
-  $tmp_name = $_FILES['image']['tmp_image'];
+  if (isset($_FILES['image'])) { // Si une image a été fournie par l'utilisateur
+    var_dump($_FILES);
+    //rename($_FILES['image']['tmp_name'], $_FILES['image']['tmp_name'].'.save');
+    // nom temporaire de l'image
+    $tmp_name = $_FILES['image']['tmp_name'];
 
+    // Récupération de l'extension du fichier en fonction de son type : http://php.net/manual/en/function.pathinfo.php
+    $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+    $img_name = $_POST['nom'] . "." . $extension;
+
+    var_dump($extension);
+  }
   // Validation
   if (!filter_var($numero, FILTER_VALIDATE_INT, array("options" => array("min_range" => 1)))) {
     $form_errors['numero'] = "Le numéro doit être un nombre strictement supérieur à 0";

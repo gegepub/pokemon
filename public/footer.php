@@ -1,3 +1,4 @@
- 	<script src="js/function.js"></script>
- </body>
+  <script src="js/function.js"></script>
+</body>
+
 </html>
