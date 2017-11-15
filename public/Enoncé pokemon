@@ -2,4 +2,4 @@ Application pokemon
 
 1. Page 'Home' dans index.php 
 2. Dans cette page on voit la liste des pokemons générée par une fonction de function.php
-3
+3. Lien qui redirige vers une url ajout.php pour le formulaire d'insertion

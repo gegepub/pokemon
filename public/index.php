@@ -1,18 +1,15 @@
 <?php
-    // Entête HTML ce require permet de charger touts les balises
+    // Entête HTML ce require permet de charger touts les balises d'entête
     require_once 'header.php';
     
   	// Fonctions de base
-    require_once '../resource/function.php';
+    require_once '../resources/function.php';
 
-	$errors[];
-	/*<div class="text-center">
-      <img src="../public/img/pokemon.png" alt="" style="width: 30%;">
-  	</div>
-  	*/
+	$errors=[];
+	
 
   	// Affichage du lien d'insertion
-	<?php echo'<a href='insert.php'> Formulaire pour insertion Pokemon </a>'; ?> 
+	echo'<a href="insert.php" class="btn btn-primary">Ajouter</a>';  
   	
     
     affiche_pokemons ($errors);

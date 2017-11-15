@@ -1,4 +1,3 @@
- 
-	<script type="text/javascript"></script>>	
+ 	<script src="js/function.js"></script>
  </body>
 </html>
